@@ -181,3 +181,3128 @@ Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-08 22:14:15 +0100
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-08 22:14:15 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-08 22:25:50 +0100
+Processing by ListingsController#index as HTML
+  [1m[36mListing Load (0.4ms)[0m  [1mSELECT "listings".* FROM "listings" ORDER BY created_at DESC[0m
+  Rendered listings/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 35ms (Views: 32.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-08 22:25:50 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-08 22:25:50 +0100
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-06-08 22:25:50 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-08 22:25:50 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-08 22:25:50 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-06-08 22:25:50 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-08 22:25:50 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-06-08 22:25:50 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-06-08 22:25:50 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-06-08 22:25:50 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-06-08 22:25:50 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-06-08 22:25:50 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-06-08 22:25:50 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-06-08 22:25:50 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-06-08 22:25:50 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-06-08 22:25:50 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-06-08 22:25:50 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-06-08 22:25:50 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-08 22:25:50 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-08 22:25:50 +0100
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-06-08 22:25:50 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-08 22:25:50 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-06-08 22:25:50 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-11 20:43:52 +0100
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (2867.3ms)[0m  SELECT "listings".* FROM "listings" ORDER BY created_at DESC
+  Rendered listings/index.html.erb within layouts/application (3848.8ms)
+  Rendered layouts/_header.html.erb (272.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 9526ms (Views: 6234.4ms | ActiveRecord: 2867.3ms)
+  [1m[36m (13.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ActsAsTaggableOnMigration (20140615195740)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255)) [0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "taggings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "tag_id" integer, "taggable_id" integer, "taggable_type" varchar(255), "tagger_id" integer, "tagger_type" varchar(255), "context" varchar(128), "created_at" datetime) 
+  [1m[36m (0.3ms)[0m  [1mCREATE INDEX "index_taggings_on_tag_id" ON "taggings" ("tag_id")[0m
+  [1m[35m (0.3ms)[0m  CREATE INDEX "index_taggings_on_taggable_id_and_taggable_type_and_context" ON "taggings" ("taggable_id", "taggable_type", "context")
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20140615195740"]]
+  [1m[35m (2254.5ms)[0m  commit transaction
+Migrating to AddMissingUniqueIndices (20140615195741)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  CREATE UNIQUE INDEX "index_tags_on_name" ON "tags" ("name")
+  [1m[36m (0.7ms)[0m  [1mDROP INDEX "index_taggings_on_tag_id"[0m
+  [1m[35m (0.3ms)[0m  DROP INDEX "index_taggings_on_taggable_id_and_taggable_type_and_context"
+  [1m[36m (0.4ms)[0m  [1mCREATE UNIQUE INDEX "taggings_idx" ON "taggings" ("tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140615195741"]]
+  [1m[36m (265.4ms)[0m  [1mcommit transaction[0m
+Migrating to AddTaggingsCounterCacheToTags (20140615195742)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "tags" ADD "taggings_count" integer DEFAULT 0[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" ORDER BY "tags"."id" ASC LIMIT 1000
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20140615195742"]]
+  [1m[35m (515.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-15 21:12:34 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (0.9ms)[0m  SELECT "listings".* FROM "listings" ORDER BY created_at DESC
+  Rendered listings/index.html.erb within layouts/application (185.1ms)
+  Rendered layouts/_header.html.erb (21.0ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 33142ms (Views: 23672.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-06-15 21:13:14 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-15 21:13:14 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-15 21:13:14 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-06-15 21:13:15 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-15 21:13:15 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-15 21:13:15 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-15 21:13:15 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-06-15 21:13:15 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-06-15 21:13:15 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-06-15 21:13:16 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-06-15 21:13:16 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-06-15 21:13:16 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-06-15 21:13:16 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-06-15 21:13:16 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-06-15 21:13:16 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-06-15 21:13:16 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-06-15 21:13:16 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-06-15 21:13:16 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-06-15 21:13:16 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-15 21:13:17 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-15 21:13:17 +0100
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-06-15 21:13:17 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-15 21:13:18 +0100
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-06-15 21:13:22 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3573.3ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4748ms (Views: 4646.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-06-15 21:13:32 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-06-15 21:13:32 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-06-15 21:13:36 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MTTT+YBSnb2jBOHokdxBDHtEELjCwKAITNn+MbY9v6k=", "user"=>{"email"=>"tester1@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (855.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'tester1@example.com' ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 401 Unauthorized in 1758ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MTTT+YBSnb2jBOHokdxBDHtEELjCwKAITNn+MbY9v6k=", "user"=>{"email"=>"tester1@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 122ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-06-15 21:13:47 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MTTT+YBSnb2jBOHokdxBDHtEELjCwKAITNn+MbY9v6k=", "user"=>{"email"=>"tester1@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'tester1@example.com' ORDER BY "users"."id" ASC LIMIT 1
+Completed 401 Unauthorized in 3ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MTTT+YBSnb2jBOHokdxBDHtEELjCwKAITNn+MbY9v6k=", "user"=>{"email"=>"tester1@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 132ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-06-15 21:13:50 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 518ms (Views: 509.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-06-15 21:14:00 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MTTT+YBSnb2jBOHokdxBDHtEELjCwKAITNn+MbY9v6k=", "user"=>{"name"=>"tester", "email"=>"tester@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'tester@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (1270.7ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sun, 15 Jun 2014 20:14:01 UTC +00:00], ["email", "tester@example.com"], ["encrypted_password", "$2a$10$8ZIYZsB8s4oPV92KvZ7nKubIGwpoOe9WovwzTHJJK0.MSWm3S8QUi"], ["name", "tester"], ["updated_at", Sun, 15 Jun 2014 20:14:01 UTC +00:00]]
+  [1m[35m (110.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `last_sign_in_ip`
+Binary data inserted for `string` type on column `current_sign_in_ip`
+  [1m[35mSQL (1.0ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1  [["last_sign_in_at", Sun, 15 Jun 2014 20:14:03 UTC +00:00], ["current_sign_in_at", Sun, 15 Jun 2014 20:14:03 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Sun, 15 Jun 2014 20:14:03 UTC +00:00]]
+  [1m[36m (180.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2922ms (ActiveRecord: 1562.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-15 21:14:03 +0100
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (0.4ms)[0m  SELECT "listings".* FROM "listings" ORDER BY created_at DESC
+  Rendered listings/index.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/listings/new" for 127.0.0.1 at 2014-06-15 21:14:07 +0100
+Processing by ListingsController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered listings/_form.html.erb (2298.4ms)
+  Rendered listings/new.html.erb within layouts/application (2536.6ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 2716ms (Views: 2697.2ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/listings" for 127.0.0.1 at 2014-06-15 21:14:34 +0100
+Processing by ListingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MTTT+YBSnb2jBOHokdxBDHtEELjCwKAITNn+MbY9v6k=", "listing"=>{"name"=>"a", "description"=>"a", "category"=>"buts", "price"=>"a"}, "commit"=>"Create Listing"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Unpermitted parameters: category
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "listings" ("created_at", "description", "name", "price", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 15 Jun 2014 20:14:34 UTC +00:00], ["description", "a"], ["name", "a"], ["price", #<BigDecimal:104088a18,'0.0',9(9)>], ["updated_at", Sun, 15 Jun 2014 20:14:34 UTC +00:00], ["user_id", 1]]
+  [1m[35m (324.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/listings/1
+Completed 302 Found in 505ms (ActiveRecord: 327.1ms)
+
+
+Started GET "/listings/1" for 127.0.0.1 at 2014-06-15 21:14:34 +0100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mListing Load (0.4ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE "listings"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered listings/show.html.erb within layouts/application (1585.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 1797ms (Views: 1792.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/no-available-image.png" for 127.0.0.1 at 2014-06-15 21:14:36 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-15 21:14:56 +0100
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (0.4ms)[0m  SELECT "listings".* FROM "listings" ORDER BY created_at DESC
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered listings/index.html.erb within layouts/application (7.1ms)
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_header.html.erb (3.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 37ms (Views: 33.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-15 21:29:04 +0100
+Processing by ListingsController#index as HTML
+  [1m[36mListing Load (0.5ms)[0m  [1mSELECT "listings".* FROM "listings" ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered listings/index.html.erb within layouts/application (8.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 33ms (Views: 30.2ms | ActiveRecord: 1.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to AddTaggingsCounterCacheToTags (20140615195742)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  CREATE TEMPORARY TABLE "atags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "taggings_count" integer DEFAULT 0) 
+  [1m[36m (0.5ms)[0m  [1mCREATE UNIQUE INDEX "tindex_atags_on_name" ON "atags" ("name")[0m
+  [1m[35m (0.2ms)[0m  SELECT * FROM "tags"
+  [1m[36m (0.5ms)[0m  [1mDROP TABLE "tags"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255)) 
+  [1m[36m (0.5ms)[0m  [1mCREATE UNIQUE INDEX "index_tags_on_name" ON "tags" ("name")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "atags"
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "atags"[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20140615195742'
+  [1m[36m (1011.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (150.8ms)[0m  [1mDROP TABLE "listings"[0m
+  [1m[35m (243.5ms)[0m  CREATE TABLE "listings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "price" decimal, "created_at" datetime, "updated_at" datetime, "image_file_name" varchar(255), "image_content_type" varchar(255), "image_file_size" integer, "image_updated_at" datetime, "user_id" integer) 
+  [1m[36m (198.3ms)[0m  [1mDROP TABLE "models"[0m
+  [1m[35m (273.2ms)[0m  CREATE TABLE "models" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (282.3ms)[0m  [1mCREATE UNIQUE INDEX "index_models_on_email" ON "models" ("email")[0m
+  [1m[35m (299.8ms)[0m  CREATE UNIQUE INDEX "index_models_on_reset_password_token" ON "models" ("reset_password_token")
+  [1m[36m (306.3ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (254.1ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "name" varchar(255)) 
+  [1m[36m (283.0ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (446.1ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-15 21:54:52 +0100
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (1.1ms)[0m  SELECT "listings".* FROM "listings" ORDER BY created_at DESC
+  Rendered listings/index.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 1037ms (Views: 76.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-06-15 21:54:55 +0100
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-06-15 21:54:55 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-15 21:54:55 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-15 21:54:55 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-15 21:54:55 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-06-15 21:54:55 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-15 21:54:55 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-06-15 21:54:55 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-06-15 21:54:55 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-06-15 21:54:55 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-06-15 21:54:55 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-06-15 21:54:55 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-06-15 21:54:55 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-15 21:54:55 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-06-15 21:54:55 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-06-15 21:54:55 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-06-15 21:54:55 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-06-15 21:54:55 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-06-15 21:54:55 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-15 21:54:55 +0100
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-06-15 21:54:55 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-15 21:54:55 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-15 21:54:55 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddTaggingsCounterCacheToTags (20140615211959)
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (1.3ms)[0m  [1mALTER TABLE "tags" ADD "taggings_count" integer DEFAULT 0[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" ORDER BY "tags"."id" ASC LIMIT 1000
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20140615211959"]]
+  [1m[35m (11.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-06-16 00:35:52 +0100
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (261.4ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 2537ms (Views: 2308.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-06-16 00:36:17 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 74ms (Views: 42.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-06-16 00:36:18 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 38ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-06-16 00:36:22 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MTTT+YBSnb2jBOHokdxBDHtEELjCwKAITNn+MbY9v6k=", "user"=>{"email"=>"tester1@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'tester1@example.com' ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 401 Unauthorized in 16ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MTTT+YBSnb2jBOHokdxBDHtEELjCwKAITNn+MbY9v6k=", "user"=>{"email"=>"tester1@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 258ms (Views: 56.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:25 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-16 00:36:25 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-06-16 00:36:25 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:25 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:25 +0100
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-06-16 00:36:26 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:26 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:26 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-16 00:36:26 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:26 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:26 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:26 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:26 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:26 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:26 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:26 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:26 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:26 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:26 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:26 +0100
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:26 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:26 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:26 +0100
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-06-16 00:36:38 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MTTT+YBSnb2jBOHokdxBDHtEELjCwKAITNn+MbY9v6k=", "user"=>{"email"=>"tester@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'tester@example.com' ORDER BY "users"."id" ASC LIMIT 1
+Completed 401 Unauthorized in 26ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MTTT+YBSnb2jBOHokdxBDHtEELjCwKAITNn+MbY9v6k=", "user"=>{"email"=>"tester@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (8.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (17.0ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 533ms (Views: 328.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-06-16 00:36:38 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-06-16 00:36:38 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-16 00:36:38 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:38 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:38 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:38 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-16 00:36:38 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:38 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:38 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:38 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:38 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:38 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:38 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:38 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:39 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:39 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:39 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:39 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:39 +0100
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:39 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:39 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:39 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:39 +0100
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-06-16 00:36:44 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (32.4ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 130ms (Views: 124.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-06-16 00:36:44 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-16 00:36:44 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:44 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-06-16 00:36:44 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:44 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:44 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-16 00:36:44 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:45 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:45 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:45 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:45 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:45 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:45 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:45 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:45 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:45 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:45 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:45 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:45 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:45 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:45 +0100
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:45 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-16 00:36:45 +0100
+
+
+Started POST "/users" for 127.0.0.1 at 2014-06-16 00:37:00 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MTTT+YBSnb2jBOHokdxBDHtEELjCwKAITNn+MbY9v6k=", "user"=>{"name"=>"tester", "email"=>"tester@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'tester@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (87.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sun, 15 Jun 2014 23:37:00 UTC +00:00], ["email", "tester@example.com"], ["encrypted_password", "$2a$10$Jkw9qJeVYOS2Ar95xBrgRe6cznnyOnO5/chpCvem6ERbXQ1iLXkGy"], ["name", "tester"], ["updated_at", Sun, 15 Jun 2014 23:37:00 UTC +00:00]]
+  [1m[35m (1067.5ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `last_sign_in_ip`
+Binary data inserted for `string` type on column `current_sign_in_ip`
+  [1m[35mSQL (1.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1  [["last_sign_in_at", Sun, 15 Jun 2014 23:37:02 UTC +00:00], ["current_sign_in_at", Sun, 15 Jun 2014 23:37:02 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Sun, 15 Jun 2014 23:37:02 UTC +00:00]]
+  [1m[36m (342.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2196ms (ActiveRecord: 1499.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-16 00:37:02 +0100
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (0.4ms)[0m  SELECT "listings".* FROM "listings" ORDER BY created_at DESC
+  Rendered listings/index.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 237ms (Views: 174.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-06-16 00:37:03 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-16 00:37:03 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-16 00:37:03 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-16 00:37:03 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-16 00:37:03 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-16 00:37:03 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-06-16 00:37:03 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-06-16 00:37:03 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-06-16 00:37:03 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-06-16 00:37:03 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-06-16 00:37:03 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-06-16 00:37:03 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-06-16 00:37:03 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-06-16 00:37:03 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-06-16 00:37:03 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-06-16 00:37:03 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-06-16 00:37:03 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-06-16 00:37:03 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-16 00:37:03 +0100
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-06-16 00:37:03 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-16 00:37:03 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-06-16 00:37:04 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-16 00:37:04 +0100
+
+
+Started GET "/listings/new" for 127.0.0.1 at 2014-06-16 00:37:09 +0100
+Processing by ListingsController#new as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered listings/_form.html.erb (422.5ms)
+  Rendered listings/new.html.erb within layouts/application (671.6ms)
+Completed 500 Internal Server Error in 719ms
+
+ActionView::Template::Error (undefined method `category' for #<Listing:0x000001039ba9c0>):
+    22: 
+    23:   <div class="form-group">
+    24:     <%= f.label :category %><br>
+    25:     <%= f.text_area :category, class: "form-control" %>
+    26:   </div>
+    27: 
+    28:   <div class="form-group">
+  app/views/listings/_form.html.erb:25:in `block in _app_views_listings__form_html_erb__4074301642772203122_2183038160'
+  app/views/listings/_form.html.erb:1:in `_app_views_listings__form_html_erb__4074301642772203122_2183038160'
+  app/views/listings/new.html.erb:3:in `_app_views_listings_new_html_erb___4034183841676997012_2183027740'
+
+
+  Rendered /Users/trabalho/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /Users/trabalho/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /Users/trabalho/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (213.1ms)
+
+
+Started GET "/listings/new" for 127.0.0.1 at 2014-06-16 00:37:10 +0100
+Processing by ListingsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered listings/_form.html.erb (6.0ms)
+  Rendered listings/new.html.erb within layouts/application (8.2ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined method `category' for #<Listing:0x00000103b6d588>):
+    22: 
+    23:   <div class="form-group">
+    24:     <%= f.label :category %><br>
+    25:     <%= f.text_area :category, class: "form-control" %>
+    26:   </div>
+    27: 
+    28:   <div class="form-group">
+  app/views/listings/_form.html.erb:25:in `block in _app_views_listings__form_html_erb__4074301642772203122_2178672680'
+  app/views/listings/_form.html.erb:1:in `_app_views_listings__form_html_erb__4074301642772203122_2178672680'
+  app/views/listings/new.html.erb:3:in `_app_views_listings_new_html_erb___4034183841676997012_2178661680'
+
+
+  Rendered /Users/trabalho/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /Users/trabalho/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Users/trabalho/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (22.4ms)
+
+
+Started GET "/listings/new" for 127.0.0.1 at 2014-06-16 00:41:07 +0100
+Processing by ListingsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered listings/_form.html.erb (2013.4ms)
+  Rendered listings/new.html.erb within layouts/application (2015.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 2146ms (Views: 2035.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-16 00:41:10 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-06-16 00:41:10 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-16 00:41:10 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:10 +0100
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-06-16 00:41:10 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:10 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:10 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:10 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:10 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:10 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:10 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:10 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:10 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:10 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:10 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:10 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:10 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:10 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:10 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:10 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:10 +0100
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:10 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:10 +0100
+
+
+Started POST "/listings" for 127.0.0.1 at 2014-06-16 00:41:27 +0100
+Processing by ListingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MTTT+YBSnb2jBOHokdxBDHtEELjCwKAITNn+MbY9v6k=", "listing"=>{"name"=>"puts", "description"=>"muves", "tag_list"=>"bunkat", "price"=>"12"}, "commit"=>"Create Listing"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Unpermitted parameters: tag_list
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  Rendered listings/_form.html.erb (6.0ms)
+  Rendered listings/new.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 107ms (Views: 26.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-16 00:41:27 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-06-16 00:41:27 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:27 +0100
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-06-16 00:41:27 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-16 00:41:27 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:27 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:28 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:28 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:28 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:28 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:28 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:28 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:28 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:28 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:28 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:28 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:28 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:28 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:28 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:28 +0100
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:28 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:28 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:28 +0100
+
+
+Started POST "/listings" for 127.0.0.1 at 2014-06-16 00:41:40 +0100
+Processing by ListingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MTTT+YBSnb2jBOHokdxBDHtEELjCwKAITNn+MbY9v6k=", "listing"=>{"name"=>"puts", "description"=>"muves", "tag_list"=>"shus,", "price"=>"12"}, "commit"=>"Create Listing"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Unpermitted parameters: tag_list
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  Rendered listings/_form.html.erb (6.7ms)
+  Rendered listings/new.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 114ms (Views: 28.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-06-16 00:41:40 +0100
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-06-16 00:41:40 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-16 00:41:40 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:40 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:40 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:40 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:40 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:40 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:40 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:40 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:40 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-16 00:41:40 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:40 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:40 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:40 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:40 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:40 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:40 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:40 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:40 +0100
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:40 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:40 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:40 +0100
+
+
+Started POST "/listings" for 127.0.0.1 at 2014-06-16 00:41:56 +0100
+Processing by ListingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MTTT+YBSnb2jBOHokdxBDHtEELjCwKAITNn+MbY9v6k=", "listing"=>{"name"=>"puts", "description"=>"muves", "tag_list"=>"lust, byst,", "price"=>"12"}, "commit"=>"Create Listing"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Unpermitted parameters: tag_list
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered listings/_form.html.erb (6.2ms)
+  Rendered listings/new.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 45ms (Views: 34.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-06-16 00:41:56 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:56 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-16 00:41:56 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:56 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-06-16 00:41:56 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:56 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-16 00:41:56 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:56 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:56 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:56 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:56 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:56 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:56 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:56 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:56 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:56 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:56 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:56 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:56 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:56 +0100
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:56 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:56 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-16 00:41:56 +0100
+
+
+Started POST "/listings" for 127.0.0.1 at 2014-06-16 00:42:09 +0100
+Processing by ListingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MTTT+YBSnb2jBOHokdxBDHtEELjCwKAITNn+MbY9v6k=", "listing"=>{"name"=>"puts", "description"=>"muves", "tag_list"=>"bus , jf , kunn ,", "price"=>"12"}, "commit"=>"Create Listing"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Unpermitted parameters: tag_list
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered listings/_form.html.erb (5.4ms)
+  Rendered listings/new.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 41ms (Views: 26.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-16 00:42:09 +0100
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-06-16 00:42:09 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-16 00:42:09 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-06-16 00:42:09 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-16 00:42:10 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-16 00:42:10 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-06-16 00:42:10 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-06-16 00:42:10 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-06-16 00:42:10 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-06-16 00:42:10 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-06-16 00:42:10 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-06-16 00:42:10 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-16 00:42:10 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-06-16 00:42:10 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-06-16 00:42:10 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-06-16 00:42:10 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-06-16 00:42:10 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-06-16 00:42:10 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-16 00:42:10 +0100
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-06-16 00:42:10 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-06-16 00:42:10 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-16 00:42:10 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-16 00:42:10 +0100
+
+
+Started POST "/listings" for 127.0.0.1 at 2014-06-16 00:43:20 +0100
+Processing by ListingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MTTT+YBSnb2jBOHokdxBDHtEELjCwKAITNn+MbY9v6k=", "listing"=>{"name"=>"puts", "description"=>"muves", "tag_list"=>"supa, hero", "price"=>"12"}, "commit"=>"Create Listing"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Unpermitted parameters: tag_list
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered listings/_form.html.erb (8.3ms)
+  Rendered listings/new.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 40ms (Views: 29.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-16 00:43:20 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:20 +0100
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-06-16 00:43:20 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-06-16 00:43:20 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-16 00:43:20 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:20 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:20 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:20 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:20 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:20 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:20 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:20 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:20 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:20 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:20 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:20 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:20 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:20 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:20 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:20 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:20 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:20 +0100
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:20 +0100
+
+
+Started POST "/listings" for 127.0.0.1 at 2014-06-16 00:43:26 +0100
+Processing by ListingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MTTT+YBSnb2jBOHokdxBDHtEELjCwKAITNn+MbY9v6k=", "listing"=>{"name"=>"puts", "description"=>"muves", "tag_list"=>"", "price"=>"12"}, "commit"=>"Create Listing"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Unpermitted parameters: tag_list
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered listings/_form.html.erb (5.6ms)
+  Rendered listings/new.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 45ms (Views: 26.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:26 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:26 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-16 00:43:26 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-16 00:43:26 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-06-16 00:43:26 +0100
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-06-16 00:43:26 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:26 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:27 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:27 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:27 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:27 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:27 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:27 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:27 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:27 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:27 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:27 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:27 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:27 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:27 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:27 +0100
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:27 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:27 +0100
+
+
+Started POST "/listings" for 127.0.0.1 at 2014-06-16 00:43:47 +0100
+Processing by ListingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MTTT+YBSnb2jBOHokdxBDHtEELjCwKAITNn+MbY9v6k=", "listing"=>{"name"=>"puts", "description"=>"muves", "tag_list"=>"fff", "price"=>"12"}, "commit"=>"Create Listing"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Unpermitted parameters: tag_list
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (19.5ms)[0m  [1mINSERT INTO "listings" ("created_at", "description", "name", "price", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 15 Jun 2014 23:43:47 UTC +00:00], ["description", "muves"], ["name", "puts"], ["price", #<BigDecimal:101631ee0,'0.12E2',9(18)>], ["updated_at", Sun, 15 Jun 2014 23:43:47 UTC +00:00], ["user_id", 1]]
+  [1m[35m (238.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/listings/1
+Completed 302 Found in 441ms (ActiveRecord: 260.4ms)
+
+
+Started GET "/listings/1" for 127.0.0.1 at 2014-06-16 00:43:47 +0100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mListing Load (0.4ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE "listings"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered listings/show.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 324ms (Views: 291.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-06-16 00:43:48 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:48 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-06-16 00:43:48 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:48 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-16 00:43:48 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-16 00:43:48 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:48 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:48 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:48 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:48 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:48 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:48 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:48 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:48 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:48 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:48 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:48 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:48 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:48 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:48 +0100
+
+
+Started GET "/assets/no-available-image.png" for 127.0.0.1 at 2014-06-16 00:43:48 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:48 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:48 +0100
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-06-16 00:43:48 +0100
+
+
+Started GET "/listings/1" for 127.0.0.1 at 2014-06-16 00:45:16 +0100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 75ms
+
+RuntimeError (`attr_accessible` is extracted out of Rails into a gem. Please use new recommended protection model for params(strong_parameters) or add `protected_attributes` to your Gemfile to use old one.):
+  app/models/listing.rb:13:in `<class:Listing>'
+  app/models/listing.rb:1:in `<top (required)>'
+  app/controllers/listings_controller.rb:80:in `set_listing'
+
+
+  Rendered /Users/trabalho/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /Users/trabalho/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /Users/trabalho/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Users/trabalho/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (239.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-16 00:52:38 +0100
+Processing by ListingsController#index as HTML
+Completed 500 Internal Server Error in 9ms
+
+RuntimeError (`attr_accessible` is extracted out of Rails into a gem. Please use new recommended protection model for params(strong_parameters) or add `protected_attributes` to your Gemfile to use old one.):
+  app/models/listing.rb:13:in `<class:Listing>'
+  app/models/listing.rb:1:in `<top (required)>'
+  app/controllers/listings_controller.rb:19:in `index'
+
+
+  Rendered /Users/trabalho/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/trabalho/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/trabalho/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/trabalho/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-16 00:52:50 +0100
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (1.1ms)[0m  SELECT "listings".* FROM "listings" ORDER BY created_at DESC
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered listings/index.html.erb within layouts/application (111.6ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 157ms (Views: 133.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-06-16 00:52:50 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-16 00:52:50 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-16 00:52:50 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-16 00:52:50 +0100
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-06-16 00:52:50 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-16 00:52:50 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-06-16 00:52:50 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-06-16 00:52:50 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-06-16 00:52:50 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-06-16 00:52:50 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-06-16 00:52:50 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-06-16 00:52:50 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-06-16 00:52:50 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-06-16 00:52:50 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-06-16 00:52:50 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-06-16 00:52:50 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-06-16 00:52:50 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-06-16 00:52:50 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-16 00:52:50 +0100
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-06-16 00:52:50 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-16 00:52:50 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-16 00:52:50 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-16 00:52:50 +0100
+
+
+Started GET "/assets/no-available-image.png" for 127.0.0.1 at 2014-06-16 00:52:50 +0100
+
+
+Started GET "/listings/new" for 127.0.0.1 at 2014-06-16 00:52:54 +0100
+Processing by ListingsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered listings/_form.html.erb (13.1ms)
+  Rendered listings/new.html.erb within layouts/application (15.7ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 42ms (Views: 37.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/listings" for 127.0.0.1 at 2014-06-16 00:52:59 +0100
+Processing by ListingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MTTT+YBSnb2jBOHokdxBDHtEELjCwKAITNn+MbY9v6k=", "listing"=>{"name"=>"", "description"=>"", "tag_list"=>"buts", "price"=>""}, "commit"=>"Create Listing"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered listings/_form.html.erb (13.3ms)
+  Rendered listings/new.html.erb within layouts/application (15.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 410ms (Views: 245.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-06-16 00:53:00 +0100
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-06-16 00:53:00 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-16 00:53:00 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:00 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:00 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-16 00:53:00 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:00 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:00 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:00 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:00 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:00 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:00 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:00 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:00 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:00 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:00 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:00 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:00 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:00 +0100
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:00 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:00 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:00 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:00 +0100
+
+
+Started POST "/listings" for 127.0.0.1 at 2014-06-16 00:53:13 +0100
+Processing by ListingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MTTT+YBSnb2jBOHokdxBDHtEELjCwKAITNn+MbY9v6k=", "listing"=>{"name"=>"dgds", "description"=>"ddengazz", "tag_list"=>"buts", "price"=>"12"}, "commit"=>"Create Listing"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "listings" ("created_at", "description", "name", "price", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 15 Jun 2014 23:53:13 UTC +00:00], ["description", "ddengazz"], ["name", "dgds"], ["price", #<BigDecimal:101668440,'0.12E2',9(18)>], ["updated_at", Sun, 15 Jun 2014 23:53:13 UTC +00:00], ["user_id", 1]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" WHERE (LOWER(name) = LOWER('buts'))
+  [1m[36mActsAsTaggableOn::Tag Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "tags" WHERE "tags"."name" = 'buts' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tags" ("name") VALUES (?)  [["name", "buts"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "Listing"]]
+  [1m[35mActsAsTaggableOn::Tagging Exists (0.3ms)[0m  SELECT 1 AS one FROM "taggings" WHERE ("taggings"."tag_id" = 1 AND "taggings"."taggable_type" = 'Listing' AND "taggings"."taggable_id" = 2 AND "taggings"."context" = 'tags' AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "taggings" ("context", "created_at", "tag_id", "taggable_id", "taggable_type") VALUES (?, ?, ?, ?, ?)[0m  [["context", "tags"], ["created_at", Sun, 15 Jun 2014 23:53:15 UTC +00:00], ["tag_id", 1], ["taggable_id", 2], ["taggable_type", "Listing"]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."id" = ? ORDER BY "tags"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + 1 WHERE "tags"."id" = 1[0m
+  [1m[35m (169.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/listings/2
+Completed 302 Found in 2071ms (ActiveRecord: 174.7ms)
+
+
+Started GET "/listings/2" for 127.0.0.1 at 2014-06-16 00:53:16 +0100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mListing Load (0.4ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE "listings"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered listings/show.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 25.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-06-16 00:53:16 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-16 00:53:16 +0100
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-06-16 00:53:16 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:16 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-16 00:53:16 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:16 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:16 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:16 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:16 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:16 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:16 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:16 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:16 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:16 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:16 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:16 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:16 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:16 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:16 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:16 +0100
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:16 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:16 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-16 00:53:16 +0100
+
+
+Started GET "/assets/no-available-image.png" for 127.0.0.1 at 2014-06-16 00:53:16 +0100
+
+
+Started GET "/listings/1" for 127.0.0.1 at 2014-06-16 16:57:48 +0100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mListing Load (238.0ms)[0m  SELECT "listings".* FROM "listings" WHERE "listings"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mUser Load (66.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered listings/show.html.erb within layouts/application (336.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3878ms (Views: 3321.2ms | ActiveRecord: 304.5ms)
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-06-16 16:58:01 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-16 16:58:02 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-06-16 16:58:02 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-06-16 16:58:02 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-06-16 16:58:02 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-16 16:58:02 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-16 16:58:02 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-16 16:58:02 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-16 16:58:02 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-06-16 16:58:03 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-06-16 16:58:03 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-06-16 16:58:03 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-06-16 16:58:03 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-06-16 16:58:03 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-06-16 16:58:03 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-06-16 16:58:05 +0100
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-06-16 16:58:05 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-06-16 16:58:05 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-06-16 16:58:05 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-06-16 16:58:05 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-16 16:58:05 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-16 16:58:05 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-16 16:58:05 +0100
+
+
+Started GET "/assets/no-available-image.png" for 127.0.0.1 at 2014-06-16 16:58:06 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-16 16:58:06 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-16 16:58:07 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-16 22:56:44 +0100
+Processing by ListingsController#index as HTML
+  [1m[36mListing Load (345.4ms)[0m  [1mSELECT "listings".* FROM "listings" ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered listings/index.html.erb within layouts/application (644.3ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_header.html.erb (5.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 5638ms (Views: 5037.4ms | ActiveRecord: 346.7ms)
+
+
+Started GET "/assets/no-available-image.png" for 127.0.0.1 at 2014-06-16 22:56:51 +0100
+
+
+Started GET "/listings/1" for 127.0.0.1 at 2014-06-16 23:01:29 +0100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mListing Load (0.3ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE "listings"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mActsAsTaggableOn::Tag Load (32.4ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)  [["taggable_id", 1], ["taggable_type", "Listing"]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered listings/show.html.erb within layouts/application (46.2ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 1263ms (Views: 1226.2ms | ActiveRecord: 33.3ms)
+
+
+Started GET "/assets/no-available-image.png" for 127.0.0.1 at 2014-06-16 23:01:32 +0100
+
+
+Started GET "/listings/2" for 127.0.0.1 at 2014-06-16 23:01:36 +0100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mListing Load (0.2ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE "listings"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)  [["taggable_id", 2], ["taggable_type", "Listing"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered listings/show.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 31ms (Views: 27.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/no-available-image.png" for 127.0.0.1 at 2014-06-16 23:01:36 +0100
+
+
+Started GET "/listings/2/edit" for 127.0.0.1 at 2014-06-16 23:01:45 +0100
+Processing by ListingsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mListing Load (0.2ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE "listings"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)  [["taggable_id", 2], ["taggable_type", "Listing"]]
+  Rendered listings/_form.html.erb (10.4ms)
+  Rendered listings/edit.html.erb within layouts/application (215.5ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 484ms (Views: 477.9ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/listings/2" for 127.0.0.1 at 2014-06-16 23:03:44 +0100
+Processing by ListingsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MTTT+YBSnb2jBOHokdxBDHtEELjCwKAITNn+MbY9v6k=", "listing"=>{"name"=>"dgds", "description"=>"Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description.", "tag_list"=>"Tags, Tags,Tags, Tags,Tags, Tags,Tags, Tags,Tags, Tags", "price"=>"12", "image"=>#<ActionDispatch::Http::UploadedFile:0x00000103c45f00 @tempfile=#<Tempfile:/var/folders/hz/hz7ZGnWOHGylRwkYZ-zmCk+++TM/-Tmp-/RackMultipart20140616-1046-qnqboq>, @original_filename="1013396_598330426865560_124125102_n.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"listing[image]\"; filename=\"1013396_598330426865560_124125102_n.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update Listing", "id"=>"2"}
+  [1m[36mListing Load (0.2ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE "listings"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  begin transaction
+Command :: file -b --mime '/var/folders/hz/hz7ZGnWOHGylRwkYZ-zmCk+++TM/-Tmp-/875ec97c4781d64a86dc7edc14b1470620140616-1046-sq9vn.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/hz/hz7ZGnWOHGylRwkYZ-zmCk+++TM/-Tmp-/875ec97c4781d64a86dc7edc14b1470620140616-1046-13197ob.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/hz/hz7ZGnWOHGylRwkYZ-zmCk+++TM/-Tmp-/875ec97c4781d64a86dc7edc14b1470620140616-1046-13197ob.jpg[0]'
+Command :: convert '/var/folders/hz/hz7ZGnWOHGylRwkYZ-zmCk+++TM/-Tmp-/875ec97c4781d64a86dc7edc14b1470620140616-1046-13197ob.jpg[0]' -auto-orient -resize "200" '/var/folders/hz/hz7ZGnWOHGylRwkYZ-zmCk+++TM/-Tmp-/875ec97c4781d64a86dc7edc14b1470620140616-1046-13197ob20140616-1046-1pbal62'
+Command :: file -b --mime '/var/folders/hz/hz7ZGnWOHGylRwkYZ-zmCk+++TM/-Tmp-/875ec97c4781d64a86dc7edc14b1470620140616-1046-13197ob20140616-1046-1pbal62'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/hz/hz7ZGnWOHGylRwkYZ-zmCk+++TM/-Tmp-/875ec97c4781d64a86dc7edc14b1470620140616-1046-13197ob.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/hz/hz7ZGnWOHGylRwkYZ-zmCk+++TM/-Tmp-/875ec97c4781d64a86dc7edc14b1470620140616-1046-13197ob.jpg[0]'
+Command :: convert '/var/folders/hz/hz7ZGnWOHGylRwkYZ-zmCk+++TM/-Tmp-/875ec97c4781d64a86dc7edc14b1470620140616-1046-13197ob.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/hz/hz7ZGnWOHGylRwkYZ-zmCk+++TM/-Tmp-/875ec97c4781d64a86dc7edc14b1470620140616-1046-13197ob20140616-1046-xdlrd3'
+Command :: file -b --mime '/var/folders/hz/hz7ZGnWOHGylRwkYZ-zmCk+++TM/-Tmp-/875ec97c4781d64a86dc7edc14b1470620140616-1046-13197ob20140616-1046-xdlrd3'
+  [1m[36mActsAsTaggableOn::Tag Load (0.6ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "Listing"]]
+Command :: file -b --mime '/var/folders/hz/hz7ZGnWOHGylRwkYZ-zmCk+++TM/-Tmp-/875ec97c4781d64a86dc7edc14b1470620140616-1046-rvjkbf.jpg'
+Binary data inserted for `string` type on column `image_content_type`
+  [1m[35mSQL (1.9ms)[0m  UPDATE "listings" SET "description" = ?, "image_file_name" = ?, "image_content_type" = ?, "image_file_size" = ?, "image_updated_at" = ?, "updated_at" = ? WHERE "listings"."id" = 2  [["description", "Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description."], ["image_file_name", "1013396_598330426865560_124125102_n.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 40488], ["image_updated_at", Mon, 16 Jun 2014 22:03:45 UTC +00:00], ["updated_at", Mon, 16 Jun 2014 22:03:47 UTC +00:00]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (LOWER(name) = LOWER('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Exists (0.2ms)[0m  SELECT 1 AS one FROM "tags" WHERE "tags"."name" = 'Tags' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("name") VALUES (?)[0m  [["name", "Tags"]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)  [["taggable_id", 2], ["taggable_type", "Listing"]]
+  [1m[36mActsAsTaggableOn::Tagging Load (7.9ms)[0m  [1mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL AND "taggings"."context" = 'tags' AND "taggings"."tag_id" IN (1)[0m  [["taggable_id", 2], ["taggable_type", "Listing"]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."id" = ? ORDER BY "tags"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) - 1 WHERE "tags"."id" = 1[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "taggings" WHERE "taggings"."id" = ?  [["id", 1]]
+  [1m[36mActsAsTaggableOn::Tagging Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "taggings" WHERE ("taggings"."tag_id" = 2 AND "taggings"."taggable_type" = 'Listing' AND "taggings"."taggable_id" = 2 AND "taggings"."context" = 'tags' AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "taggings" ("context", "created_at", "tag_id", "taggable_id", "taggable_type") VALUES (?, ?, ?, ?, ?)  [["context", "tags"], ["created_at", Mon, 16 Jun 2014 22:03:48 UTC +00:00], ["tag_id", 2], ["taggable_id", 2], ["taggable_type", "Listing"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? ORDER BY "tags"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + 1 WHERE "tags"."id" = 2
+  [1m[36m (41.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/listings/2
+Completed 302 Found in 3216ms (ActiveRecord: 55.7ms)
+
+
+Started GET "/listings/2" for 127.0.0.1 at 2014-06-16 23:03:48 +0100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mListing Load (0.3ms)[0m  SELECT "listings".* FROM "listings" WHERE "listings"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "Listing"]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered listings/show.html.erb within layouts/application (15.8ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 48ms (Views: 42.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-06-16 23:03:48 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-06-16 23:03:48 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-16 23:03:48 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-16 23:03:48 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-06-16 23:03:48 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-16 23:03:48 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-06-16 23:03:48 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-06-16 23:03:48 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-16 23:03:48 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-16 23:03:48 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-06-16 23:03:48 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-06-16 23:03:48 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-06-16 23:03:48 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-06-16 23:03:48 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-06-16 23:03:48 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-06-16 23:03:48 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-06-16 23:03:48 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-06-16 23:03:48 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-06-16 23:03:48 +0100
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-06-16 23:03:50 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-16 23:03:50 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-16 23:03:50 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-16 23:03:50 +0100
+
+
+Started GET "/listings" for 127.0.0.1 at 2014-06-16 23:04:01 +0100
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (0.5ms)[0m  SELECT "listings".* FROM "listings" ORDER BY created_at DESC
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered listings/index.html.erb within layouts/application (13.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 83ms (Views: 80.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/no-available-image.png" for 127.0.0.1 at 2014-06-16 23:04:01 +0100
+
+
+Started GET "/listings/2" for 127.0.0.1 at 2014-06-16 23:04:06 +0100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mListing Load (0.3ms)[0m  SELECT "listings".* FROM "listings" WHERE "listings"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "Listing"]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered listings/show.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 39ms (Views: 35.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/listings/2/edit" for 127.0.0.1 at 2014-06-16 23:04:13 +0100
+Processing by ListingsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mListing Load (0.2ms)[0m  SELECT "listings".* FROM "listings" WHERE "listings"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "Listing"]]
+  Rendered listings/_form.html.erb (8.5ms)
+  Rendered listings/edit.html.erb within layouts/application (256.8ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 479ms (Views: 471.9ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/listings/2" for 127.0.0.1 at 2014-06-16 23:04:39 +0100
+Processing by ListingsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MTTT+YBSnb2jBOHokdxBDHtEELjCwKAITNn+MbY9v6k=", "listing"=>{"name"=>"dgds", "description"=>"Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description.", "tag_list"=>"Tags, Tags, Tags, tags, tags, tags, ", "price"=>"12"}, "commit"=>"Update Listing", "id"=>"2"}
+  [1m[35mListing Load (0.3ms)[0m  SELECT "listings".* FROM "listings" WHERE "listings"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)  [["taggable_id", 2], ["taggable_type", "Listing"]]
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "listings" SET "updated_at" = ? WHERE "listings"."id" = 2[0m  [["updated_at", Mon, 16 Jun 2014 22:04:39 UTC +00:00]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.4ms)[0m  SELECT "tags".* FROM "tags" WHERE (LOWER(name) = LOWER('tags') OR LOWER(name) = LOWER('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.7ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "Listing"]]
+  [1m[35m (374.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/listings/2
+Completed 302 Found in 433ms (ActiveRecord: 377.2ms)
+
+
+Started GET "/listings/2" for 127.0.0.1 at 2014-06-16 23:04:39 +0100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mListing Load (0.2ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE "listings"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)  [["taggable_id", 2], ["taggable_type", "Listing"]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered listings/show.html.erb within layouts/application (9.6ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 31ms (Views: 28.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-16 23:04:39 +0100
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-06-16 23:04:39 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-16 23:04:39 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-16 23:04:40 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-06-16 23:04:40 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-06-16 23:04:40 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-06-16 23:04:40 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-06-16 23:04:40 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-06-16 23:04:40 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-06-16 23:04:40 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-16 23:04:40 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-06-16 23:04:40 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-06-16 23:04:40 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-06-16 23:04:40 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-06-16 23:04:40 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-16 23:04:40 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-06-16 23:04:40 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-06-16 23:04:40 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-06-16 23:04:40 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-16 23:04:40 +0100
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-06-16 23:04:40 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-16 23:04:40 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-16 23:04:40 +0100
+
+
+Started GET "/listings/2/edit" for 127.0.0.1 at 2014-06-16 23:04:45 +0100
+Processing by ListingsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mListing Load (32.2ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE "listings"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)  [["taggable_id", 2], ["taggable_type", "Listing"]]
+  Rendered listings/_form.html.erb (7.7ms)
+  Rendered listings/edit.html.erb within layouts/application (9.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 476ms (Views: 243.1ms | ActiveRecord: 33.1ms)
+
+
+Started PATCH "/listings/2" for 127.0.0.1 at 2014-06-16 23:05:05 +0100
+Processing by ListingsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MTTT+YBSnb2jBOHokdxBDHtEELjCwKAITNn+MbY9v6k=", "listing"=>{"name"=>"dgds", "description"=>"Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description, Description.", "tag_list"=>"Tags, tag, taggunt, tagism, tagist, tagus, taggisms", "price"=>"12"}, "commit"=>"Update Listing", "id"=>"2"}
+  [1m[36mListing Load (0.2ms)[0m  [1mSELECT "listings".* FROM "listings" WHERE "listings"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "Listing"]]
+  [1m[35mSQL (0.5ms)[0m  UPDATE "listings" SET "updated_at" = ? WHERE "listings"."id" = 2  [["updated_at", Mon, 16 Jun 2014 22:05:05 UTC +00:00]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (LOWER(name) = LOWER('tags') OR LOWER(name) = LOWER('tag') OR LOWER(name) = LOWER('taggunt') OR LOWER(name) = LOWER('tagism') OR LOWER(name) = LOWER('tagist') OR LOWER(name) = LOWER('tagus') OR LOWER(name) = LOWER('taggisms'))[0m
+  [1m[35mActsAsTaggableOn::Tag Exists (0.2ms)[0m  SELECT 1 AS one FROM "tags" WHERE "tags"."name" = 'tag' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("name") VALUES (?)[0m  [["name", "tag"]]
+  [1m[35mActsAsTaggableOn::Tag Exists (0.2ms)[0m  SELECT 1 AS one FROM "tags" WHERE "tags"."name" = 'taggunt' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "tags" ("name") VALUES (?)[0m  [["name", "taggunt"]]
+  [1m[35mActsAsTaggableOn::Tag Exists (0.2ms)[0m  SELECT 1 AS one FROM "tags" WHERE "tags"."name" = 'tagism' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "tags" ("name") VALUES (?)[0m  [["name", "tagism"]]
+  [1m[35mActsAsTaggableOn::Tag Exists (0.1ms)[0m  SELECT 1 AS one FROM "tags" WHERE "tags"."name" = 'tagist' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "tags" ("name") VALUES (?)[0m  [["name", "tagist"]]
+  [1m[35mActsAsTaggableOn::Tag Exists (0.3ms)[0m  SELECT 1 AS one FROM "tags" WHERE "tags"."name" = 'tagus' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "tags" ("name") VALUES (?)[0m  [["name", "tagus"]]
+  [1m[35mActsAsTaggableOn::Tag Exists (0.1ms)[0m  SELECT 1 AS one FROM "tags" WHERE "tags"."name" = 'taggisms' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "tags" ("name") VALUES (?)[0m  [["name", "taggisms"]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)  [["taggable_id", 2], ["taggable_type", "Listing"]]
+  [1m[36mActsAsTaggableOn::Tagging Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "taggings" WHERE ("taggings"."tag_id" = 3 AND "taggings"."taggable_type" = 'Listing' AND "taggings"."taggable_id" = 2 AND "taggings"."context" = 'tags' AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "taggings" ("context", "created_at", "tag_id", "taggable_id", "taggable_type") VALUES (?, ?, ?, ?, ?)  [["context", "tags"], ["created_at", Mon, 16 Jun 2014 22:05:05 UTC +00:00], ["tag_id", 3], ["taggable_id", 2], ["taggable_type", "Listing"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? ORDER BY "tags"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mSQL (0.1ms)[0m  UPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + 1 WHERE "tags"."id" = 3
+  [1m[36mActsAsTaggableOn::Tagging Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "taggings" WHERE ("taggings"."tag_id" = 4 AND "taggings"."taggable_type" = 'Listing' AND "taggings"."taggable_id" = 2 AND "taggings"."context" = 'tags' AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "taggings" ("context", "created_at", "tag_id", "taggable_id", "taggable_type") VALUES (?, ?, ?, ?, ?)  [["context", "tags"], ["created_at", Mon, 16 Jun 2014 22:05:05 UTC +00:00], ["tag_id", 4], ["taggable_id", 2], ["taggable_type", "Listing"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? ORDER BY "tags"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + 1 WHERE "tags"."id" = 4
+  [1m[36mActsAsTaggableOn::Tagging Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "taggings" WHERE ("taggings"."tag_id" = 5 AND "taggings"."taggable_type" = 'Listing' AND "taggings"."taggable_id" = 2 AND "taggings"."context" = 'tags' AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "taggings" ("context", "created_at", "tag_id", "taggable_id", "taggable_type") VALUES (?, ?, ?, ?, ?)  [["context", "tags"], ["created_at", Mon, 16 Jun 2014 22:05:05 UTC +00:00], ["tag_id", 5], ["taggable_id", 2], ["taggable_type", "Listing"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? ORDER BY "tags"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + 1 WHERE "tags"."id" = 5
+  [1m[36mActsAsTaggableOn::Tagging Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "taggings" WHERE ("taggings"."tag_id" = 6 AND "taggings"."taggable_type" = 'Listing' AND "taggings"."taggable_id" = 2 AND "taggings"."context" = 'tags' AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "taggings" ("context", "created_at", "tag_id", "taggable_id", "taggable_type") VALUES (?, ?, ?, ?, ?)  [["context", "tags"], ["created_at", Mon, 16 Jun 2014 22:05:05 UTC +00:00], ["tag_id", 6], ["taggable_id", 2], ["taggable_type", "Listing"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? ORDER BY "tags"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mSQL (0.1ms)[0m  UPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + 1 WHERE "tags"."id" = 6
+  [1m[36mActsAsTaggableOn::Tagging Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "taggings" WHERE ("taggings"."tag_id" = 7 AND "taggings"."taggable_type" = 'Listing' AND "taggings"."taggable_id" = 2 AND "taggings"."context" = 'tags' AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "taggings" ("context", "created_at", "tag_id", "taggable_id", "taggable_type") VALUES (?, ?, ?, ?, ?)  [["context", "tags"], ["created_at", Mon, 16 Jun 2014 22:05:05 UTC +00:00], ["tag_id", 7], ["taggable_id", 2], ["taggable_type", "Listing"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? ORDER BY "tags"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + 1 WHERE "tags"."id" = 7
+  [1m[36mActsAsTaggableOn::Tagging Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "taggings" WHERE ("taggings"."tag_id" = 8 AND "taggings"."taggable_type" = 'Listing' AND "taggings"."taggable_id" = 2 AND "taggings"."context" = 'tags' AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "taggings" ("context", "created_at", "tag_id", "taggable_id", "taggable_type") VALUES (?, ?, ?, ?, ?)  [["context", "tags"], ["created_at", Mon, 16 Jun 2014 22:05:05 UTC +00:00], ["tag_id", 8], ["taggable_id", 2], ["taggable_type", "Listing"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? ORDER BY "tags"."id" ASC LIMIT 1[0m  [["id", 8]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + 1 WHERE "tags"."id" = 8
+  [1m[36m (554.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/listings/2
+Completed 302 Found in 624ms (ActiveRecord: 562.0ms)
+
+
+Started GET "/listings/2" for 127.0.0.1 at 2014-06-16 23:05:06 +0100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mListing Load (0.3ms)[0m  SELECT "listings".* FROM "listings" WHERE "listings"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "Listing"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered listings/show.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 33ms (Views: 29.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-06-16 23:05:06 +0100
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-06-16 23:05:06 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-16 23:05:06 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-16 23:05:06 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-06-16 23:05:06 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-16 23:05:06 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-16 23:05:06 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-16 23:05:06 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-06-16 23:05:06 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-06-16 23:05:06 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-06-16 23:05:06 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-06-16 23:05:06 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-06-16 23:05:06 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-06-16 23:05:06 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-06-16 23:05:06 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-06-16 23:05:06 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-06-16 23:05:06 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-06-16 23:05:06 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-06-16 23:05:06 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-16 23:05:06 +0100
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-06-16 23:05:06 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-16 23:05:06 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-16 23:05:06 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-16 23:07:44 +0100
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (0.5ms)[0m  SELECT "listings".* FROM "listings" ORDER BY created_at DESC
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered listings/index.html.erb within layouts/application (9.9ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined method `tag_list' for nil:NilClass):
+    12:             <h3><%= listing.name %></h3>
+    13:             <p><%= number_to_currency (listing.price) %></p>
+    14:             <p><%= "Sold by #{listing.user.name}" %></p>
+    15:             <h6><%= @listing.tag_list %></h6>
+    16:           </div>
+    17:         </div>
+    18:       </div>
+  app/views/listings/index.html.erb:15:in `block in _app_views_listings_index_html_erb__850277893047237584_2178781660'
+  app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb__850277893047237584_2178781660'
+
+
+  Rendered /Users/trabalho/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+  Rendered /Users/trabalho/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+  Rendered /Users/trabalho/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (432.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-16 23:07:45 +0100
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (0.5ms)[0m  SELECT "listings".* FROM "listings" ORDER BY created_at DESC
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered listings/index.html.erb within layouts/application (11.1ms)
+Completed 500 Internal Server Error in 41ms
+
+ActionView::Template::Error (undefined method `tag_list' for nil:NilClass):
+    12:             <h3><%= listing.name %></h3>
+    13:             <p><%= number_to_currency (listing.price) %></p>
+    14:             <p><%= "Sold by #{listing.user.name}" %></p>
+    15:             <h6><%= @listing.tag_list %></h6>
+    16:           </div>
+    17:         </div>
+    18:       </div>
+  app/views/listings/index.html.erb:15:in `block in _app_views_listings_index_html_erb__850277893047237584_2184515160'
+  app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb__850277893047237584_2184515160'
+
+
+  Rendered /Users/trabalho/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /Users/trabalho/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/trabalho/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (68.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-16 23:08:57 +0100
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (0.5ms)[0m  SELECT "listings".* FROM "listings" ORDER BY created_at DESC
+  Rendered listings/index.html.erb within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 23ms
+
+ActionView::Template::Error (undefined method `tag_list' for nil:NilClass):
+    11:           <div class="caption">
+    12:             <h3><%= listing.name %></h3>
+    13:             <p><%= number_to_currency (listing.price) %></p>
+    14:             <h5><%= @listing.tag_list %></h5>
+    15:             <p><%= "Sold by #{listing.user.name}" %></p>
+    16:           </div>
+    17:         </div>
+  app/views/listings/index.html.erb:14:in `block in _app_views_listings_index_html_erb__850277893047237584_2184879020'
+  app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb__850277893047237584_2184879020'
+
+
+  Rendered /Users/trabalho/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/trabalho/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/trabalho/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-16 23:09:14 +0100
+Processing by ListingsController#index as HTML
+  [1m[36mListing Load (0.4ms)[0m  [1mSELECT "listings".* FROM "listings" ORDER BY created_at DESC[0m
+  Rendered listings/index.html.erb within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (undefined method `tag_list' for nil:NilClass):
+    11:           <div class="caption">
+    12:             <h3><%= listing.name %></h3>
+    13:             <p><%= number_to_currency (listing.price) %></p>
+    14:             <p><%= @listing.tag_list %></p>
+    15:             <p><%= "Sold by #{listing.user.name}" %></p>
+    16:           </div>
+    17:         </div>
+  app/views/listings/index.html.erb:14:in `block in _app_views_listings_index_html_erb__850277893047237584_2180427960'
+  app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb__850277893047237584_2180427960'
+
+
+  Rendered /Users/trabalho/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /Users/trabalho/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+  Rendered /Users/trabalho/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (49.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-16 23:09:28 +0100
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (0.5ms)[0m  SELECT "listings".* FROM "listings" ORDER BY created_at DESC
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "Listing"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 1], ["taggable_type", "Listing"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered listings/index.html.erb within layouts/application (89.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 115ms (Views: 111.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-16 23:09:28 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-06-16 23:09:28 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-16 23:09:28 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-16 23:09:28 +0100
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-06-16 23:09:28 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-16 23:09:28 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-06-16 23:09:28 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-06-16 23:09:28 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-16 23:09:29 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-06-16 23:09:29 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-06-16 23:09:29 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-06-16 23:09:29 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-06-16 23:09:29 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-06-16 23:09:29 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-06-16 23:09:29 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-06-16 23:09:29 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-06-16 23:09:29 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-06-16 23:09:29 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-16 23:09:29 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-16 23:09:29 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-16 23:09:29 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-06-16 23:09:29 +0100
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-06-16 23:09:29 +0100
+
+
+Started GET "/assets/no-available-image.png" for 127.0.0.1 at 2014-06-16 23:09:29 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-16 23:10:09 +0100
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (0.4ms)[0m  SELECT "listings".* FROM "listings" ORDER BY created_at DESC
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "Listing"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 1], ["taggable_type", "Listing"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered listings/index.html.erb within layouts/application (16.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 38ms (Views: 35.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-16 23:10:10 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:10 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-06-16 23:10:10 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-16 23:10:10 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:10 +0100
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-06-16 23:10:10 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:10 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:10 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:10 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:10 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:10 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:10 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:10 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:10 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:10 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:10 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:10 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:10 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:10 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:10 +0100
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:10 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:10 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:10 +0100
+
+
+Started GET "/assets/no-available-image.png" for 127.0.0.1 at 2014-06-16 23:10:10 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-16 23:10:31 +0100
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (0.5ms)[0m  SELECT "listings".* FROM "listings" ORDER BY created_at DESC
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)  [["taggable_id", 2], ["taggable_type", "Listing"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)  [["taggable_id", 1], ["taggable_type", "Listing"]]
+  Rendered listings/index.html.erb within layouts/application (71.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 96ms (Views: 92.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-06-16 23:10:31 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-16 23:10:31 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:31 +0100
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-06-16 23:10:31 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-16 23:10:31 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:31 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:31 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:31 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:31 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:31 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:31 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:31 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:31 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:31 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:31 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:31 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:31 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:31 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:31 +0100
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:31 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:31 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:31 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-16 23:10:31 +0100
+
+
+Started GET "/assets/no-available-image.png" for 127.0.0.1 at 2014-06-16 23:10:31 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-16 23:11:24 +0100
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (156.8ms)[0m  SELECT "listings".* FROM "listings" ORDER BY created_at DESC
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.4ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)  [["taggable_id", 2], ["taggable_type", "Listing"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)  [["taggable_id", 1], ["taggable_type", "Listing"]]
+  Rendered listings/index.html.erb within layouts/application (280.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 375ms (Views: 141.7ms | ActiveRecord: 159.7ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-16 23:11:26 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-16 23:11:26 +0100
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-06-16 23:11:26 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-06-16 23:11:26 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-16 23:11:26 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-16 23:11:26 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-16 23:11:26 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-06-16 23:11:26 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-06-16 23:11:26 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-06-16 23:11:26 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-06-16 23:11:26 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-06-16 23:11:26 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-06-16 23:11:27 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-06-16 23:11:27 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-06-16 23:11:27 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-06-16 23:11:27 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-06-16 23:11:27 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-06-16 23:11:27 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-06-16 23:11:27 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-16 23:11:27 +0100
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-06-16 23:11:27 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-16 23:11:27 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-16 23:11:27 +0100
+
+
+Started GET "/assets/no-available-image.png" for 127.0.0.1 at 2014-06-16 23:11:27 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-17 15:36:56 +0100
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (355.8ms)[0m  SELECT "listings".* FROM "listings" ORDER BY created_at DESC
+  [1m[36mUser Load (41.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.8ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)  [["taggable_id", 2], ["taggable_type", "Listing"]]
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.6ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)  [["taggable_id", 1], ["taggable_type", "Listing"]]
+  Rendered listings/index.html.erb within layouts/application (3388.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (5.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 109043ms (Views: 107975.7ms | ActiveRecord: 399.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-17 15:38:50 +0100
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (0.5ms)[0m  SELECT "listings".* FROM "listings" ORDER BY created_at DESC
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)  [["taggable_id", 2], ["taggable_type", "Listing"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)  [["taggable_id", 1], ["taggable_type", "Listing"]]
+  Rendered listings/index.html.erb within layouts/application (15.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 98ms (Views: 40.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 15:38:53 +0100
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-06-17 15:38:53 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-06-17 15:38:53 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-17 15:38:53 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 15:38:53 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 15:38:54 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-06-17 15:38:54 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-06-17 15:38:54 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 15:38:54 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-06-17 15:38:54 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-06-17 15:38:54 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-06-17 15:38:55 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-06-17 15:38:55 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-06-17 15:38:55 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-06-17 15:38:55 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-06-17 15:38:55 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-06-17 15:38:55 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-17 15:38:57 +0100
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-06-17 15:38:57 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 15:38:57 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-17 15:38:57 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-06-17 15:38:57 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-06-17 15:38:57 +0100
+
+
+Started GET "/assets/no-available-image.png" for 127.0.0.1 at 2014-06-17 15:38:58 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-17 16:04:00 +0100
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (985.7ms)[0m  SELECT "listings".* FROM "listings" ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)  [["taggable_id", 2], ["taggable_type", "Listing"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)  [["taggable_id", 1], ["taggable_type", "Listing"]]
+  Rendered listings/index.html.erb within layouts/application (1224.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 1857ms (Views: 836.0ms | ActiveRecord: 986.8ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-06-17 16:04:09 +0100
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-06-17 16:04:09 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 16:04:09 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:09 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-17 16:04:09 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:09 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:09 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:09 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:09 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:09 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:09 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:09 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:09 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:09 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:09 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:09 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:09 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:09 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:09 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:09 +0100
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:09 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:09 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:09 +0100
+
+
+Started GET "/assets/no-available-image.png" for 127.0.0.1 at 2014-06-17 16:04:09 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-17 16:04:46 +0100
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (0.5ms)[0m  SELECT "listings".* FROM "listings" ORDER BY created_at DESC
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)  [["taggable_id", 2], ["taggable_type", "Listing"]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)  [["taggable_id", 1], ["taggable_type", "Listing"]]
+  Rendered listings/index.html.erb within layouts/application (17.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 108ms (Views: 77.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-17 16:04:46 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:46 +0100
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-06-17 16:04:46 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:46 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-06-17 16:04:46 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 16:04:46 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:46 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:46 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:46 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:46 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:46 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:46 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:46 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:46 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:46 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:46 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:46 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:46 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:46 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:46 +0100
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:46 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:46 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:46 +0100
+
+
+Started GET "/assets/no-available-image.png" for 127.0.0.1 at 2014-06-17 16:04:46 +0100

@@ -82,7 +82,7 @@ class ListingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def listing_params
-      params.require(:listing).permit(:name, :description, :price, :image)
+      params.require(:listing).permit(:name, :description, :price, :image, :tag_list)
     end
     # This function checks to see if the current user who is logged in is the same person who created the listing in question
     # != not equal

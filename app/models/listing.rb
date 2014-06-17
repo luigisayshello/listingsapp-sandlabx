@@ -8,9 +8,12 @@ class Listing < ActiveRecord::Base
         :path => ":style/:id_:filename"
   end
    validates_attachment_content_type :image, :content_type => %w(image/jpeg image/jpg image/png)
-   validates :name, :description, :price, presence: true 
-
+   validates :name, :description, :price, :tag_list, presence: true 
+   
+   acts_as_taggable
+   
    belongs_to :user
+   
 end
 
 #validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
