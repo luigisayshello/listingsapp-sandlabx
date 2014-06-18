@@ -3306,3 +3306,162 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 16:04:46
 
 
 Started GET "/assets/no-available-image.png" for 127.0.0.1 at 2014-06-17 16:04:46 +0100
+
+
+Started GET "/listings/new" for 127.0.0.1 at 2014-06-17 23:09:23 +0100
+Processing by ListingsController#new as HTML
+  [1m[35mUser Load (317.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered listings/_form.html.erb (1789.5ms)
+  Rendered listings/new.html.erb within layouts/application (2145.9ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 6320ms (Views: 4177.9ms | ActiveRecord: 317.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-18 00:03:11 +0100
+Processing by ListingsController#index as HTML
+  [1m[36mListing Load (670.6ms)[0m  [1mSELECT "listings".* FROM "listings" ORDER BY created_at DESC[0m
+  [1m[35mUser Load (436.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.7ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "Listing"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 1], ["taggable_type", "Listing"]]
+  Rendered listings/index.html.erb within layouts/application (3345.0ms)
+  [1m[35mUser Load (20.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_header.html.erb (23.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 11368ms (Views: 10115.2ms | ActiveRecord: 1129.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-18 00:03:24 +0100
+Processing by ListingsController#index as HTML
+  [1m[36mListing Load (0.6ms)[0m  [1mSELECT "listings".* FROM "listings" ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "Listing"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 1], ["taggable_type", "Listing"]]
+  Rendered listings/index.html.erb within layouts/application (54.2ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 15109ms (Views: 15055.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/no-available-image.png" for 127.0.0.1 at 2014-06-18 00:03:41 +0100
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-06-18 14:22:26 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"MTTT+YBSnb2jBOHokdxBDHtEELjCwKAITNn+MbY9v6k="}
+  [1m[36mUser Load (261.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (1.9ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2212ms (ActiveRecord: 263.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-18 14:22:46 +0100
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (40.2ms)[0m  SELECT "listings".* FROM "listings" ORDER BY created_at DESC
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)  [["taggable_id", 2], ["taggable_type", "Listing"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)  [["taggable_id", 1], ["taggable_type", "Listing"]]
+  Rendered listings/index.html.erb within layouts/application (648.4ms)
+  Rendered layouts/_header.html.erb (50.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 1620ms (Views: 1510.9ms | ActiveRecord: 41.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-18 14:22:49 +0100
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-06-18 14:22:49 +0100
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-06-18 14:22:49 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-18 14:22:49 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-18 14:22:49 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-18 14:22:50 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-06-18 14:22:50 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-18 14:22:50 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-06-18 14:22:50 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-06-18 14:22:50 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-06-18 14:22:50 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-06-18 14:22:50 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-06-18 14:22:50 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-06-18 14:22:50 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-06-18 14:22:50 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-06-18 14:22:51 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-06-18 14:22:51 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-06-18 14:22:51 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-18 14:22:51 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-06-18 14:22:51 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-18 14:22:51 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-18 14:22:51 +0100
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-06-18 14:22:51 +0100
+
+
+Started GET "/assets/no-available-image.png" for 127.0.0.1 at 2014-06-18 14:22:51 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-18 14:50:38 +0100
+Processing by ListingsController#index as HTML
+  [1m[36mListing Load (1028.5ms)[0m  [1mSELECT "listings".* FROM "listings" ORDER BY created_at DESC[0m
+  Rendered listings/index.html.erb within layouts/application (2975.3ms)
+Completed 500 Internal Server Error in 5073ms
+
+ActionView::Template::Error (:app_secret credential is nil):
+     7:     <% @listings.each do |listing| %>
+     8:       <div class="col-md-3">
+     9:         <div class="thumbnail">
+    10:           <%= link_to image_tag(listing.image.url), listing %>
+    11:           <div class="caption">
+    12:             <h3><%= listing.name %></h3>
+    13:             <p><%= number_to_currency (listing.price) %></p>
+  app/views/listings/index.html.erb:10:in `block in _app_views_listings_index_html_erb__850277893047237584_2210536000'
+  app/views/listings/index.html.erb:7:in `_app_views_listings_index_html_erb__850277893047237584_2210536000'
+
+
+  Rendered /Users/trabalho/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (53.8ms)
+  Rendered /Users/trabalho/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.4ms)
+  Rendered /Users/trabalho/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (770.7ms)
