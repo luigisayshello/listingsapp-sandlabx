@@ -3465,3 +3465,88 @@ ActionView::Template::Error (:app_secret credential is nil):
   Rendered /Users/trabalho/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (53.8ms)
   Rendered /Users/trabalho/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.4ms)
   Rendered /Users/trabalho/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (770.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-18 14:55:00 +0100
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (1.1ms)[0m  SELECT "listings".* FROM "listings" ORDER BY created_at DESC
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.5ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)  [["taggable_id", 2], ["taggable_type", "Listing"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)  [["taggable_id", 1], ["taggable_type", "Listing"]]
+  Rendered listings/index.html.erb within layouts/application (176.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 798ms (Views: 735.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-06-18 14:55:00 +0100
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-06-18 14:55:01 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-18 14:55:01 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-18 14:55:01 +0100
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-18 14:55:01 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-18 14:55:01 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-18 14:55:01 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-06-18 14:55:01 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-06-18 14:55:01 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-06-18 14:55:01 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-06-18 14:55:01 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-06-18 14:55:01 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-06-18 14:55:01 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-06-18 14:55:01 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-06-18 14:55:01 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-06-18 14:55:01 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-06-18 14:55:01 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-18 14:55:01 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-06-18 14:55:01 +0100
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-06-18 14:55:01 +0100
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-18 14:55:01 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-18 14:55:01 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-06-18 14:55:01 +0100
+
+
+Started GET "/assets/no-available-image.png" for 127.0.0.1 at 2014-06-18 14:55:01 +0100
