@@ -155,7 +155,7 @@ DEPENDENCIES
   devise
   figaro
   jbuilder (~> 1.2)
-  jquery-rails
+  jquery-rails (~> 3.1.0)
   paperclip!
   paperclip-dropbox (>= 1.1.7)
   pg
