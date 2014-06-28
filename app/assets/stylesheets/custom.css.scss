@@ -60,7 +60,13 @@ body {
   }
  }
 
+@-moz-document url-prefix() {
+  fieldset { display: table-cell; }
+}
 
+tr {
+	background-color: #FFFFFF;
+}
 
 .col1 img { max-width: 80px; }
 .col2 img { max-width: 180px; }

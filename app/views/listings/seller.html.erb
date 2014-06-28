@@ -1,19 +1,22 @@
-<table class="table table-striped table-bordered">
-  <tr>
+<table class="table table-bordered table-hover table-responsive">
+  <tr id="seller">
     <th class="center">Image</th>
     <th class="center">Name</th>
     <th class="center">Description</th>
+<!-- <th class="center">Categories</th> -->
+    <th class="center">Tags</th>   
     <th class="center">Price</th>
     <th class="center">Action</th>
   </tr>
 
   <% @listings.each do |listing| %>
     <tr>
-      <td><%= image_tag listing.image.url(:thumb) %></td>
-      <td><%= listing.name %></td>
-      <td><%= listing.description %></td>
-      <td><%= number_to_currency(listing.price) %></td>
-      <td>
+      <td class="center"><%= image_tag listing.image.url(:thumb) %></td>
+      <td class="center"><%= listing.name %></td>
+      <td class="center"><%= listing.description %></td>
+      <td class="center"><%= raw listing.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></td>
+      <td class="center"><%= number_to_currency(listing.price) %></td>
+      <td class="center">
         <%= link_to "View", listing, class: "btn btn-link" %>
         <%= link_to "Edit", edit_listing_path(listing), class: "btn btn-link" %>
         <%= link_to 'Destroy', listing, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-link" %>
