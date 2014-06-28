@@ -12,7 +12,7 @@
             <h3><%= listing.name %></h3>
             <p><%= number_to_currency (listing.price) %></p>
             <p><%= "Sold by #{listing.user.name}" %></p>
-            <h6><%= listing.tag_list %></h6>
+            <h6><%= raw listing.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')  %></h6>
           </div>
         </div>
       </div>

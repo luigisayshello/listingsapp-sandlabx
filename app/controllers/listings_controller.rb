@@ -15,8 +15,14 @@ class ListingsController < ApplicationController
     @listings = Listing.where(user: current_user).order("created_at DESC")
   end
 
+  def tag
+    if params[:tag]
+      @listings = Listing.tagged_with(params[:tag])
+    end
+  end 
+
   def index
-    @listings = Listing.all.order("created_at DESC")
+      @listings = Listing.all.order("created_at DESC")
   end
 
   # GET /listings/1

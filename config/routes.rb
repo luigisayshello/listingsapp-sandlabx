@@ -6,6 +6,7 @@ Etsydemo::Application.routes.draw do
   get "pages/about"
   get "pages/contact"
   get 'seller' => "listings#seller"
+  get 'tag/:tag' => "listings#tag", as: :tag
 
   root 'listings#index'
   # The priority is based upon order of creation: first created -> highest priority.

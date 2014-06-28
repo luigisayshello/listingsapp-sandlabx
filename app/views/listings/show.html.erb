@@ -8,7 +8,9 @@
 		<h3><%= @listing.name %></h3>
 		<p><%= number_to_currency@listing.price %></p>
 		<p><%= @listing.description %></p>
-		<p><%= @listing.tag_list %></p>
+		<!-- raw removes the html beeing shown on the tags list, to see remove 'raw' and reload -->
+		<p><%= raw @listing.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')  %></p>
+
 	</div>
 </div>
 
